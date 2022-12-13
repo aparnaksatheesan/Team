@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <style class="text/css">
+        label{width:100px;display:inline-block;}
+    </style>
+</head>
+<body style="background-image:url(https://tse4.mm.bing.net/th?id=OIP.OTUFsrOHL6C2Qvgl-WdgiwHaEo&pid=Api&P=0)">
+<center>
+<form action="register" method="POST" style="width:1200px;height:200px;" >
+{% csrf_token %}
+    <h2><label>User Name</label>
+    <input type="text" name="username" placeholder="Enter your name"><br>
+    <label>First Name</label>
+    <input type="text" name="firstname" placeholder="Enter your First name"><br>
+    <label>Last name</label>
+    <input type="text" name="lastname" placeholder="Enter your Last name"><br>
+    <label>email id</label>
+    <input type="email" name="email" placeholder="Enter your Email id"><br>
+    <label>Password</label>
+    <input type="password" name="password"><br>
+    <label>Confirm Password</label>
+    <input type="password" name="confirm password"><br>
+    <input type="submit"><br></h2>
+</form>
+</center>
+{% for m in messages %}
+{{m}}
+{% endfor %}
+</body>
+</html>

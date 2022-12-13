@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for i in result %}
+				<div class="col-lg-4 why_col">
+					<div class="why_item">
+						<div class="why_image">
+							<img src="{{i.image.url}}" alt="">
+							<div class="why_icon d-flex flex-column align-items-center justify-content-center">
+								<img src="{(i.image_top.url)}" alt="">
+							</div>
+						</div>
+						<div class="why_content text-center">
+							<div class="why_title">{{i.name}}</div>
+							<div class="why_text">
+								<p>{{i.description}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+
+
+
+
+{'team': object2}
+
+{% for t in team %}
+				<div class="col-xl-3 col-md-6 team_col">
+					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
+						<div class="team_image"><img src="{{t.image.url}}" alt=""></div>
+						<div class="team_content">
+							<div class="team_title">{{t.name}}</div>
+							<div class="team_text">
+								<p>{{t.description}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+		       {% endfor %}
+</body>
+</html>
